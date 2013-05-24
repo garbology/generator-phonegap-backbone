@@ -1,6 +1,7 @@
 'use strict';
 var util = require('util');
 var path = require('path');
+var phonegap = require('phonegap');
 var yeoman = require('yeoman-generator');
 
 
@@ -53,19 +54,24 @@ PhonegapBackboneGenerator.prototype.askFor = function askFor() {
 
 PhonegapBackboneGenerator.prototype.app = function app() {
   this.mkdir('app');
-  this.mkdir('app/templates');
+  this.directory('www-source', 'app/www-source');
 
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
-  this.copy('_bower.json', 'bower.json');
+  phonegap.create({ path: 'app' });
 };
 
+// PhonegapBackboneGenerator.prototype.app = function app() {
+  // this.mkdir('app/www-source');
+
+  // this.copy('templates', 'templates');
+  // this.copy('_bower.json', 'bower.json');
+  // this.copy('_bower.json', 'bower.json');
+// };
+
 PhonegapBackboneGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
+  // this.copy('editorconfig', '.editorconfig');
+  // this.copy('jshintrc', '.jshintrc');
 };
 
 PhonegapBackboneGenerator.prototype.readme = function readme() {
-  this.copy('README.md', 'README.md');
-  // this.copy('jshintrc', '.jshintrc');
+  // this.copy('README.md', 'README.md');
 };

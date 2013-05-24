@@ -24,7 +24,8 @@
     "yeoman-generator": "~0.10.2"
   },
   "devDependencies": {
-    "mocha": "~1.9.0"
+    "mocha": "~1.9.0",
+    "phonegap": "~0.9.3"
   },
   "engines": {
     "node": ">=0.8.0"

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "backbone": "1.0.x",
+    "jquery": "2.0.x",
+    "marionette": "1.0.x",
+    "mustache": "0.7.x",
+    "underscore": "1.4.x"
+  }
+}
+

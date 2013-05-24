@@ -1,5 +1,6 @@
 'use strict';
 
+var exec = require("child_process").exec;
 var util = require('util');
 var path = require('path');
 var phonegap = require('phonegap');
@@ -31,10 +32,24 @@ PhonegapBackboneGenerator.prototype.app = function app() {
   '\n ´   ' + '`  |'.red + '° ' + '´ Y'.red + ' `\n';
 
   console.log(welcome);
-  this.mkdir('app');
-  this.directory('www-source', 'app/www-source');
+
+  this.destinationRoot('app/www-source');
+
+  this.directory('www-source', '.');
   this.copy('_package.json', 'package.json');
   this.copy('README.md', 'README.md');
 
-  phonegap.create({ path: 'app' });
+  this.write("../www/css/.keep", "");
+  this.write("../www/img/.keep", "");
+  this.write("../www/js/.keep", "");
+
+  this.copy("www/index.html", "../www/index.html");
+
+  phonegap.create({ path: '..' });
+
+  exec("rm ../www/index.html");
+  exec("rm ../www/js/index.js");
+  exec("rm ../www/img/logo.png");
+  exec("rm ../www/css/index.css");
 };
+

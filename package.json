@@ -1,15 +1,15 @@
 {
   "name": "generator-phonegap-backbone",
   "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "description": "A Yeoman generator for Phonegap/Backbone projects",
   "keywords": [
     "yeoman-generator"
   ],
   "homepage": "https://github.com/jclem/generator-phonegap-backbone",
   "bugs": "https://github.com/jclem/generator-phonegap-backbone/issues",
   "author": {
-    "name": "jclem",
-    "email": "user@example.net",
+    "name": "Jonathan Clem",
+    "email": "jonathan@jclem.net",
     "url": "https://github.com/jclem"
   },
   "main": "app/index.js",

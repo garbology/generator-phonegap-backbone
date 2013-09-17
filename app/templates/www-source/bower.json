@@ -1,4 +1,5 @@
 {
+  "name": "phonegap-backbone",
   "dependencies": {
     "backbone": "1.0.x",
     "jquery": "2.0.x",
